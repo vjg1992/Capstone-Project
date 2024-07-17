@@ -12,7 +12,7 @@ const Register = () => {
     password: "",
     confirm_password: ""
   });
-
+  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
   const addData = (e) => {
@@ -21,6 +21,10 @@ const Register = () => {
       ...userData,
       [name]: value
     });
+  };
+
+  const togglePasswordVisibility = () => {
+    setShowPassword((prevShowPassword) => !prevShowPassword);
   };
 
   const handleSubmit = async (e) => {
@@ -117,19 +121,28 @@ const Register = () => {
               </div>
 
               <div className="login_data">
-                <label htmlFor="">Password</label>
-                <input type="password" 
+                <label htmlFor="password">Password</label>
+                <input type={showPassword ? "text" : "password"} 
                   onChange={addData}
                   value={userData.password}
-                  name="password" id="password" placeholder='Atleast 6 character...'/>
+                  name="password" id="password" placeholder="At least 6 characters..."/>
               </div>
 
               <div className="login_data">
-                <label htmlFor="">Confirm Password</label>
-                <input type="password" 
+                <label htmlFor="confirm_password">Confirm Password</label>
+                <input type={showPassword ? "text" : "password"} 
                   onChange={addData}
                   value={userData.confirm_password}
-                  name="confirm_password" id="password"/>
+                  name="confirm_password" id="confirm_password" placeholder="Write password again..."/>
+              </div>
+
+              <div className="password_input">
+                <input
+                  type="checkbox"
+                  id="showPasswordCheckbox"
+                  onChange={togglePasswordVisibility}
+                />
+                <label htmlFor="showPasswordCheckbox">Show Password</label>
               </div>
 
               <button className='login_btn' onClick={handleSubmit}>Continue</button>

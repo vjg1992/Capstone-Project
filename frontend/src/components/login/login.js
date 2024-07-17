@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./login.css";
@@ -9,6 +9,8 @@ const Login = () => {
     emailOrMobile: "",
     password: ""
   });
+  const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
   const addData = (e) => {
     const { name, value } = e.target;
@@ -16,6 +18,10 @@ const Login = () => {
       ...prevData,
       [name]: value
     }));
+  };
+
+  const togglePasswordVisibility = () => {
+    setShowPassword((prevShowPassword) => !prevShowPassword);
   };
 
   const sendData = async (e) => {
@@ -26,41 +32,54 @@ const Login = () => {
     const mobilePattern = /^[0-9]{10}$/;
 
     if (emailOrMobile === "") {
-      toast.warn("Please Enter Your Email or Mobile Number", { position: "top-center" });
+      toast.warn("Please Enter Your Email or Mobile Number", {
+        position: "top-center"
+      });
     } else if (isNaN(emailOrMobile) && !emailPattern.test(emailOrMobile)) {
       toast.warn("Please Enter a Valid Email", { position: "top-center" });
     } else if (!isNaN(emailOrMobile) && !mobilePattern.test(emailOrMobile)) {
-      toast.warn("Please Enter a Valid 10 Digit Mobile Number", { position: "top-center" });
+      toast.warn("Please Enter a Valid 10 Digit Mobile Number", {
+        position: "top-center"
+      });
     } else if (password === "") {
       toast.warn("Please Enter Your Password", { position: "top-center" });
     } else if (password.length < 6) {
-      toast.warn("Password must be at least 6 characters", { position: "top-center" });
-    } else {
-      // Proceed with form submission
-      const res = await fetch("/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ emailOrMobile, password })
+      toast.warn("Password must be at least 6 characters", {
+        position: "top-center"
       });
+    } else {
+      try {
+        const res = await fetch("http://localhost:8001/api/users/login", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ emailOrMobile, password })
+        });
 
-      const data = await res.json();
-      console.log(data);
+        const responseData = await res.json();
 
-      if (res.status === 422 || !data) {
-        if (data.error) {
-          toast.warn(data.error, { position: "top-center" });
+        if (res.status === 422 || !responseData) {
+          if (responseData.error) {
+            toast.warn(responseData.error, { position: "top-center" });
+          } else {
+            toast.warn("Invalid Details", { position: "top-center" });
+          }
         } else {
-          toast.warn("Invalid Details", { position: "top-center" });
-        }
-      } else {
-        toast.success("Login Successful", { position: "top-center" });
-        console.log("Login Successful");
+          toast.success("Login Successful", { position: "top-center" });
+          console.log("Login Successful");
 
-        setData({
-          emailOrMobile: "",
-          password: ""
+          setData({
+            emailOrMobile: "",
+            password: ""
+          });
+
+          navigate("/");
+        }
+      } catch (error) {
+        console.error("Error:", error);
+        toast.error("An error occurred. Please try again later.", {
+          position: "top-center"
         });
       }
     }
@@ -91,13 +110,21 @@ const Login = () => {
               <div className="login_data">
                 <label htmlFor="password">Password</label>
                 <input
-                  type="password"
+                  type={showPassword ? "text" : "password"}
                   onChange={addData}
                   value={data.password}
                   name="password"
                   id="password"
                   placeholder="At least 6 characters..."
                 />
+                <div className="password_input">
+                  <input
+                    type="checkbox"
+                    id="showPasswordCheckbox"
+                    onChange={togglePasswordVisibility}
+                  />
+                  <label htmlFor="showPasswordCheckbox">Show Password</label>
+                </div>
               </div>
               <button className="login_btn" onClick={sendData}>
                 Login
