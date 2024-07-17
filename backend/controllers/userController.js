@@ -80,7 +80,7 @@ const getUserDetails = async (req, res) => {
 
 
 const updateUserDetails = async (req, res) => {
-  const { name, email, mobile, password } = req.body;
+  const { name, email, mobile, password, addresses } = req.body;
 
   try {
     let user = await User.findById(req.user.id);
@@ -92,6 +92,7 @@ const updateUserDetails = async (req, res) => {
     user.name = name || user.name;
     user.email = email || user.email;
     user.mobile = mobile || user.mobile;
+    user.addresses = addresses || user.addresses;
 
     if (password) {
       user.password = password;
