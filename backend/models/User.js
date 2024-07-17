@@ -3,10 +3,10 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const addressSchema = new Schema({
+  fullname: { type: String, required: true },
   contactNo: { type: String, required: true },
   address: { type: String, required: true },
-  pincode: { type: String, required: true },
-  landmark: { type: String }
+  pincode: { type: String, required: true }
 });
 
 const userSchema = new Schema({

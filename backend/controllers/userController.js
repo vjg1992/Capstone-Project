@@ -48,8 +48,7 @@ const loginUser = async (req, res) => {
     if (!user) {
       return res.status(422).json({ error: 'Invalid credentials' });
     }
-
-    // For simplicity, assuming password comparison directly without bcrypt
+    
     if (password !== user.password) {
       return res.status(422).json({ error: 'Invalid credentials' });
     }
@@ -61,4 +60,60 @@ const loginUser = async (req, res) => {
   }
 };
 
-module.exports = { registerUser, loginUser };
+const getUserDetails = async (req, res) => {
+  try {
+    const user = await User.findById(req.user.id);
+    res.json(user);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server error');
+  }
+};
+
+const updateUserDetails = async (req, res) => {
+  const { name, email, mobile, password } = req.body;
+
+  try {
+    let user = await User.findById(req.user.id);
+
+    if (!user) {
+      return res.status(404).json({ msg: 'User not found' });
+    }
+
+    user.name = name || user.name;
+    user.email = email || user.email;
+    user.mobile = mobile || user.mobile;
+
+    if (password) {
+      user.password = password;
+    }
+
+    await user.save();
+    res.json(user);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server error');
+  }
+};
+
+const updateUserAddress = async (req, res) => {
+  const { addresses } = req.body;
+
+  try {
+    let user = await User.findById(req.user.id);
+
+    if (!user) {
+      return res.status(404).json({ msg: 'User not found' });
+    }
+
+    user.addresses = addresses;
+
+    await user.save();
+    res.json(user);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server error');
+  }
+};
+
+module.exports = { registerUser, loginUser, getUserDetails, updateUserDetails, updateUserAddress };

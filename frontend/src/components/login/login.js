@@ -69,6 +69,8 @@ const Login = () => {
           toast.success("Login Successful", { position: "top-center" });
           console.log("Login Successful");
 
+          localStorage.setItem('token', responseData.token);
+
           setData({
             emailOrMobile: "",
             password: ""
