@@ -35,17 +35,25 @@ const AccountInfo = () => {
 
     const fetchUserDetails = async () => {
       try {
-        const response = await fetch('/api/users/me', {
+        const response = await fetch('http://localhost:8001/api/users/me', {
           headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${token}`
           }
         });
-        const data = await response.json();
+
+        const responseText = await response.text();
+        console.log('Response Text:', responseText);
+
+        if (!response.ok) {
+          throw new Error(`Error ${response.status}: ${responseText}`);
+        }
+
+        const data = JSON.parse(responseText); 
         setUserDetails(data);
       } catch (error) {
         console.error('Error fetching user details:', error);
-        toast.error('Error fetching user details');
+        toast.error('Error fetching user details: ' + error.message);
       }
     };
 
@@ -66,6 +74,7 @@ const AccountInfo = () => {
       ...editMode,
       [field]: !editMode[field]
     });
+    setIsChanged(true);
   };
 
   const handlePasswordToggle = () => {
@@ -75,7 +84,7 @@ const AccountInfo = () => {
   const handleSave = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('/api/users/me', {
+      const response = await fetch('http://localhost:8001/api/users/me', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -83,15 +92,18 @@ const AccountInfo = () => {
         },
         body: JSON.stringify(userDetails)
       });
-      const data = await response.json();
-      if (response.ok) {
-        toast.success('Details updated successfully!');
-        setUserDetails(data);
-      } else {
-        toast.error(data.msg || 'Error updating details');
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`Error ${response.status}: ${errorText}`);
       }
+
+      const data = await response.json();
+      toast.success('Details updated successfully!');
+      setUserDetails(data);
+      setIsChanged(false);
     } catch (error) {
-      toast.error('Error updating details');
+      toast.error('Error updating details: ' + error.message);
       console.error('Error:', error);
     }
   };
@@ -104,6 +116,7 @@ const AccountInfo = () => {
         { fullname: '', contactNo: '', address: '', pincode: '' }
       ]
     });
+    setIsChanged(true);
   };
 
   const handleAddressChange = (index, e) => {
