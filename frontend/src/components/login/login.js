@@ -128,17 +128,20 @@ const Login = () => {
                   <label htmlFor="showPasswordCheckbox">Show Password</label>
                 </div>
               </div>
+              <div className="loginbutton">
               <button className="login_btn" onClick={sendData}>
                 Login
               </button>
+              </div>
             </form>
           </div>
 
           <div className="register_info">
-            <p>New to ShopPlusPlus?</p>
+            <p>New to ShopPlusPlus?
             <NavLink to="/register">
               <button>Create New Account</button>
             </NavLink>
+            </p>
           </div>
         </div>
         <ToastContainer />

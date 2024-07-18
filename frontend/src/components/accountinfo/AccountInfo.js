@@ -237,11 +237,11 @@ const AccountInfo = () => {
               </div>
               <div className="account-info-section">
                 <label>Address:</label>
-                <input 
-                  type="text" 
+                <textarea 
                   name="address" 
                   value={address.address} 
                   onChange={(e) => handleAddressChange(index, e)} 
+                  rows="3"
                 />
               </div>
               <div className="account-info-section">
@@ -259,6 +259,7 @@ const AccountInfo = () => {
         )}
         <button onClick={handleAddAddress}>+ Add Address</button>
       </div>
+      <br />
       {isChanged && <button onClick={handleSave}>Save</button>}
       <ToastContainer />
     </div>
