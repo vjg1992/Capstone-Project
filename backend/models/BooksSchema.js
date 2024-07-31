@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const BaseSchema = require('./BaseSchema');
+const { ProductDetails } = require('./BaseSchema');
 
 const BooksSchema = new Schema({
   Author: { type: [String], required: true },
@@ -12,6 +12,7 @@ const BooksSchema = new Schema({
   PageCount: { type: Number }
 });
 
-const Books = BaseSchema.discriminator('Books', BooksSchema);
+const Books = ProductDetails.discriminator('Books', BooksSchema);
+
 
 module.exports = Books;

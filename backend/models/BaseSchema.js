@@ -55,4 +55,4 @@ const BaseSchema = new Schema({
 
 const ProductDetails = mongoose.model('ProductDetails', BaseSchema);
 
-module.exports = { ProductDetails, BaseSchema,generateProductID };
+module.exports = { ProductDetails, BaseSchema, generateProductID };

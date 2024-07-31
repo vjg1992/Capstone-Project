@@ -137,11 +137,10 @@ const Login = () => {
           </div>
 
           <div className="register_info">
-            <p>New to ShopPlusPlus?
+            <p>New to ShopPlusPlus? </p>
             <NavLink to="/register">
               <button>Create New Account</button>
             </NavLink>
-            </p>
           </div>
         </div>
         <ToastContainer />

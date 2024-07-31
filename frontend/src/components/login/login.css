@@ -16,7 +16,6 @@ section {
 }
 
 .logo_white {
-    width: 250px;
     cursor: pointer;
     padding-left: 5px;
     z-index: 0;
@@ -28,8 +27,8 @@ section {
 
 .login_form {
     border: 1px solid #e9ecef;
-    padding: 30px;
-    margin-top: -50px;
+    padding: 10px;
+    margin-top: -130px;
     border-radius: 15px;
     background: linear-gradient(to bottom right, #ffd700, #ffa500); 
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -59,7 +58,7 @@ section {
 }
 
 .login_form input {
-    width: 100%; 
+    width: 90%; 
     height: 27px;
     border-radius: 8px;
     outline: none;
@@ -124,12 +123,12 @@ section {
 .register_info button {
     background: linear-gradient(to bottom, #f7f8fa, #b0b0b4);
     color: black;
-    height: 50px;
+    height: 45px;
     width: 300px;
     border-radius: 8px;
     border: 1px solid #adb1b8;
     outline: none;
-    margin-top: 15px;
+    margin-top: 0px;
 }
 
 .register_info a {
@@ -141,6 +140,7 @@ section {
 
 button {
     width: 350px;
+    margin-left: 30px;
     background: #343a40; 
     color: #ffd700;
     border: none;
