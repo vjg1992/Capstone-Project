@@ -1,48 +1,85 @@
-const Book = require('../models/BooksSchema');
-const Electronics = require('../models/ElectronicsSchema');
-const Fashion = require('../models/FashionSchema');
-const HomeAndKitchen = require('../models/HomeandKitchenSchema');
-const SportsAndFitness = require('../models/SportsandFitnessSchema');
+const ProductDetails = require('../models/BaseModel');
+const DogProduct = require('../models/DogProduct');
+const CatProduct = require('../models/CatProduct');
+const FishProduct = require('../models/FishProduct');
+const PetSupply = require('../models/PetSupply');
+const PetHealth = require('../models/PetHealth');
+const PetAccessory = require('../models/PetAccessory');
 
-exports.getAllProducts = async (req, res) => {
+const createProduct = async (req, res) => {
   try {
-    const books = await Book.find();
-    const electronics = await Electronics.find();
-    const fashion = await Fashion.find();
-    const homeAndKitchen = await HomeAndKitchen.find();
-    const sportsAndFitness = await SportsAndFitness.find();
-    const allProducts = [...books, ...electronics, ...fashion, ...homeAndKitchen, ...sportsAndFitness];
-    res.json(allProducts);
+    const { category } = req.body;
+    let product;
+
+    switch (category) {
+      case 'DogProduct':
+        product = new DogProduct(req.body);
+        break;
+      case 'CatProduct':
+        product = new CatProduct(req.body);
+        break;
+      case 'FishProduct':
+        product = new FishProduct(req.body);
+        break;
+      case 'PetSupply':
+        product = new PetSupply(req.body);
+        break;
+      case 'PetHealth':
+        product = new PetHealth(req.body);
+        break;
+      case 'PetAccessory':
+        product = new PetAccessory(req.body);
+        break;
+      default:
+        return res.status(400).send('Invalid product category');
+    }
+
+    await product.save();
+    res.status(201).send(product);
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    res.status(500).send(error);
   }
 };
 
-exports.getProductsByCategory = async (req, res) => {
-  const category = req.params.category;
+const getProduct = async (req, res) => {
   try {
-    let products;
-    switch (category) {
-      case 'books':
-        products = await Book.find();
-        break;
-      case 'electronics':
-        products = await Electronics.find();
-        break;
-      case 'fashion':
-        products = await Fashion.find();
-        break;
-      case 'home-and-kitchen':
-        products = await HomeAndKitchen.find();
-        break;
-      case 'sports-and-fitness':
-        products = await SportsAndFitness.find();
-        break;
-      default:
-        return res.status(400).json({ message: 'Invalid category' });
+    const product = await ProductDetails.findById(req.params.id);
+    if (!product) {
+      return res.status(404).send('Product not found');
     }
-    res.json(products);
+    res.send(product);
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    res.status(500).send(error);
   }
+};
+
+const updateProduct = async (req, res) => {
+  try {
+    const product = await ProductDetails.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true });
+    if (!product) {
+      return res.status(404).send('Product not found');
+    }
+    res.send(product);
+  } catch (error) {
+    res.status(500).send(error);
+  }
+};
+
+const deleteProduct = async (req, res) => {
+  try {
+    const product = await ProductDetails.findByIdAndDelete(req.params.id);
+    if (!product) {
+      return res.status(404).send('Product not found');
+    }
+    res.send('Product deleted');
+  } catch (error) {
+    res.status(500).send(error);
+  }
+};
+
+module.exports = {
+  createProduct,
+  getProduct,
+  updateProduct,
+  deleteProduct
 };
