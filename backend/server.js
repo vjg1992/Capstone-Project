@@ -3,6 +3,11 @@ const cors = require('cors');
 const connectDB = require('./Database/DBConnection'); 
 const userRoutes = require('./routes/user');
 const productRoutes = require('./routes/productRoutes');
+const wishlistRoutes = require('./routes/wishlistRoutes');
+const cartRoutes = require('./routes/cartRoutes');
+const orderRoutes = require('./routes/orderRoutes');
+const reviewRoutes = require('./routes/reviewRoutes');
+const purchaseRoutes = require('./routes/purchaseRoutes');  // Import purchase routes
 require('dotenv').config();
 
 const app = express();
@@ -19,6 +24,11 @@ connectDB();
 
 app.use('/api/users', userRoutes);
 app.use('/api/products', productRoutes);
+app.use('/api/wishlist', wishlistRoutes);
+app.use('/api/cart', cartRoutes);
+app.use('/api/orders', orderRoutes);
+app.use('/api/reviews', reviewRoutes);
+app.use('/api/purchases', purchaseRoutes);  // Use purchase routes
 
 app.get('/', (req, res) => {
   res.send('Hello World');
