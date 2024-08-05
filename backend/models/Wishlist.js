@@ -8,14 +8,16 @@ const WishlistSchema = new Schema({
         required: true
     },
     products: [{
-        type: Schema.Types.ObjectId,
-        refPath: 'productModel'
-    }],
-    productModel: {
-        type: String,
-        required: true,
-        enum: ['CatProduct', 'DogProduct', 'FishProduct', 'PetAccessory', 'PetHealth', 'PetSupply']
-    }
+        productId: {
+            type: Schema.Types.ObjectId,
+            refPath: 'products.productModel'
+        },
+        productModel: {
+            type: String,
+            required: true,
+            enum: ['CatProduct', 'DogProduct', 'FishProduct', 'PetAccessory', 'PetHealth', 'PetSupply']
+        }
+    }]
 });
 
 module.exports = mongoose.model('Wishlist', WishlistSchema);

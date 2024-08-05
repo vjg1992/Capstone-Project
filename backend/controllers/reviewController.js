@@ -2,24 +2,24 @@ const Review = require('../models/Review');
 const CatProduct = require('../models/CatProduct');
 const DogProduct = require('../models/DogProduct');
 const FishProduct = require('../models/FishProduct');
-const PetAccessory = require('../models/PetAcessory');
+const PetAccessory = require('../models/PetAccessory');
 const PetHealth = require('../models/PetHealth');
 const PetSupply = require('../models/PetSupply');
 
 // Function to find the product in the appropriate collection
 const findProductById = async (productId) => {
-    let product = await CatProduct.findById(productId)
-        || await DogProduct.findById(productId)
-        || await FishProduct.findById(productId)
-        || await PetAccessory.findById(productId)
-        || await PetHealth.findById(productId)
-        || await PetSupply.findById(productId);
+    let product = await CatProduct.findOne({ ProductID: productId })
+        || await DogProduct.findOne({ ProductID: productId })
+        || await FishProduct.findOne({ ProductID: productId })
+        || await PetAccessory.findOne({ ProductID: productId })
+        || await PetHealth.findOne({ ProductID: productId })
+        || await PetSupply.findOne({ ProductID: productId });
     return product;
 };
 
 exports.addReview = async (req, res) => {
     try {
-        const { productId, rating, comment, productModel } = req.body;
+        const { productId, rating, comment } = req.body;
         const userId = req.user.id;
 
         const product = await findProductById(productId);
@@ -29,8 +29,8 @@ exports.addReview = async (req, res) => {
 
         const review = new Review({
             user: userId,
-            product: productId,
-            productModel,
+            product: product._id,
+            productModel: product.constructor.modelName,
             rating,
             comment
         });
@@ -49,7 +49,7 @@ exports.getReviewsByProduct = async (req, res) => {
         const productId = req.params.productId;
         const reviews = await Review.find({ product: productId }).populate('user');
 
-        if (!reviews) {
+        if (!reviews.length) {
             return res.status(404).json({ msg: 'No reviews found for this product' });
         }
 
@@ -65,7 +65,7 @@ exports.getReviewsByUser = async (req, res) => {
         const userId = req.user.id;
         const reviews = await Review.find({ user: userId }).populate('product');
 
-        if (!reviews) {
+        if (!reviews.length) {
             return res.status(404).json({ msg: 'No reviews found for this user' });
         }
 

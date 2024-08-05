@@ -2,18 +2,35 @@ const Order = require('../models/Order');
 const CatProduct = require('../models/CatProduct');
 const DogProduct = require('../models/DogProduct');
 const FishProduct = require('../models/FishProduct');
-const PetAccessory = require('../models/PetAcessory');
+const PetAccessory = require('../models/PetAccessory');
 const PetHealth = require('../models/PetHealth');
 const PetSupply = require('../models/PetSupply');
 
 // Function to find the product in the appropriate collection
-const findProductById = async (productId) => {
-    let product = await CatProduct.findById(productId)
-        || await DogProduct.findById(productId)
-        || await FishProduct.findById(productId)
-        || await PetAccessory.findById(productId)
-        || await PetHealth.findById(productId)
-        || await PetSupply.findById(productId);
+const findProductById = async (productId, productModel) => {
+    let product;
+    switch (productModel) {
+        case 'CatProduct':
+            product = await CatProduct.findOne({ ProductID: productId });
+            break;
+        case 'DogProduct':
+            product = await DogProduct.findOne({ ProductID: productId });
+            break;
+        case 'FishProduct':
+            product = await FishProduct.findOne({ ProductID: productId });
+            break;
+        case 'PetAccessory':
+            product = await PetAccessory.findOne({ ProductID: productId });
+            break;
+        case 'PetHealth':
+            product = await PetHealth.findOne({ ProductID: productId });
+            break;
+        case 'PetSupply':
+            product = await PetSupply.findOne({ ProductID: productId });
+            break;
+        default:
+            break;
+    }
     return product;
 };
 
@@ -23,7 +40,7 @@ exports.createOrder = async (req, res) => {
         const userId = req.user.id;
 
         const orderItems = await Promise.all(items.map(async item => {
-            const product = await findProductById(item.productId);
+            const product = await findProductById(item.productId, item.productModel);
             if (!product) {
                 throw new Error('Product not found');
             }

@@ -18,7 +18,7 @@ const findProductById = async (productId) => {
 
 exports.addToWishlist = async (req, res) => {
     try {
-        const { productId } = req.body;
+        const { productId, productModel } = req.body;
         const userId = req.user.id;
 
         let wishlist = await Wishlist.findOne({ user: userId });
@@ -32,7 +32,7 @@ exports.addToWishlist = async (req, res) => {
             return res.status(404).json({ msg: 'Product not found' });
         }
 
-        wishlist.products.push(productId);
+        wishlist.products.push({ productId, productModel });
         await wishlist.save();
 
         res.status(200).json(wishlist);
@@ -52,7 +52,7 @@ exports.removeFromWishlist = async (req, res) => {
             return res.status(404).json({ msg: 'Wishlist not found' });
         }
 
-        wishlist.products = wishlist.products.filter(id => id.toString() !== productId);
+        wishlist.products = wishlist.products.filter(item => item.productId.toString() !== productId);
 
         await wishlist.save();
 
@@ -66,7 +66,7 @@ exports.removeFromWishlist = async (req, res) => {
 exports.getWishlist = async (req, res) => {
     try {
         const userId = req.user.id;
-        const wishlist = await Wishlist.findOne({ user: userId }).populate('products');
+        const wishlist = await Wishlist.findOne({ user: userId }).populate('products.productId');
 
         if (!wishlist) {
             return res.status(404).json({ msg: 'Wishlist not found' });
