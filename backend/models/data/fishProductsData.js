@@ -3,7 +3,7 @@ const FishProduct = require('../FishProduct');
 const generateProductID = require('../../utils/generateProductID');
 
 const fishProductsData = [
-    new FishProduct({
+  new FishProduct({
       ProductName: 'Tropical Fish Flakes',
       Category: 'Fish Products',
       SubCategory: 'Food',
@@ -14,15 +14,15 @@ const fishProductsData = [
       Price: 500,
       StockQuantity: 100,
       AvailabilityStatus: 'In Stock',
-      Images: ['fishflakes.jpg'],
+      Images: ['/genricFishProducts.webp'],
       Rating: 4.3,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '500g',
       type: 'Flakes',
       waterType: 'Freshwater'
-    }),
-    new FishProduct({
+  }),
+  new FishProduct({
       ProductName: 'Goldfish Flakes',
       Category: 'Fish Products',
       SubCategory: 'Food',
@@ -33,15 +33,15 @@ const fishProductsData = [
       Price: 450,
       StockQuantity: 150,
       AvailabilityStatus: 'In Stock',
-      Images: ['goldfishflakes.jpg'],
+      Images: ['/genricFishProducts.webp'],
       Rating: 4.6,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '400g',
       type: 'Flakes',
       waterType: 'Freshwater'
-    }),
-    new FishProduct({
+  }),
+  new FishProduct({
       ProductName: 'Cichlid Pellets',
       Category: 'Fish Products',
       SubCategory: 'Food',
@@ -52,15 +52,15 @@ const fishProductsData = [
       Price: 600,
       StockQuantity: 120,
       AvailabilityStatus: 'In Stock',
-      Images: ['cichlidpellets.jpg'],
+      Images: ['/genricFishProducts.webp'],
       Rating: 4.7,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '600g',
       type: 'Pellets',
       waterType: 'Freshwater'
-    }),
-    new FishProduct({
+  }),
+  new FishProduct({
       ProductName: 'Betta Pellets',
       Category: 'Fish Products',
       SubCategory: 'Food',
@@ -71,15 +71,15 @@ const fishProductsData = [
       Price: 550,
       StockQuantity: 130,
       AvailabilityStatus: 'In Stock',
-      Images: ['bettapellets.jpg'],
+      Images: ['/genricFishProducts.webp'],
       Rating: 4.8,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '300g',
       type: 'Pellets',
       waterType: 'Freshwater'
-    }),
-    new FishProduct({
+  }),
+  new FishProduct({
       ProductName: 'Algae Wafers',
       Category: 'Fish Products',
       SubCategory: 'Food',
@@ -90,15 +90,15 @@ const fishProductsData = [
       Price: 700,
       StockQuantity: 90,
       AvailabilityStatus: 'In Stock',
-      Images: ['algaewafers.jpg'],
+      Images: ['/genricFishProducts.webp'],
       Rating: 4.5,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '700g',
       type: 'Wafers',
       waterType: 'Freshwater'
-    }),
-    new FishProduct({
+  }),
+  new FishProduct({
       ProductName: 'Catfish Wafers',
       Category: 'Fish Products',
       SubCategory: 'Food',
@@ -109,15 +109,15 @@ const fishProductsData = [
       Price: 750,
       StockQuantity: 110,
       AvailabilityStatus: 'In Stock',
-      Images: ['catfishwafers.jpg'],
+      Images: ['/genricFishProducts.webp'],
       Rating: 4.7,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '800g',
       type: 'Wafers',
       waterType: 'Freshwater'
-    }),
-    new FishProduct({
+  }),
+  new FishProduct({
       ProductName: 'Aquarium Gravel',
       Category: 'Fish Products',
       SubCategory: 'Substrate',
@@ -128,15 +128,15 @@ const fishProductsData = [
       Price: 300,
       StockQuantity: 200,
       AvailabilityStatus: 'In Stock',
-      Images: ['aquariumgravel.jpg'],
+      Images: ['/genricFishProducts.webp'],
       Rating: 4.2,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '2kg',
       type: 'Gravel',
       waterType: 'Freshwater'
-    }),
-    new FishProduct({
+  }),
+  new FishProduct({
       ProductName: 'Natural River Rocks',
       Category: 'Fish Products',
       SubCategory: 'Substrate',
@@ -147,15 +147,15 @@ const fishProductsData = [
       Price: 350,
       StockQuantity: 180,
       AvailabilityStatus: 'In Stock',
-      Images: ['riverrocks.jpg'],
+      Images: ['/genricFishProducts.webp'],
       Rating: 4.4,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '2.5kg',
       type: 'Gravel',
       waterType: 'Freshwater'
-    }),
-    new FishProduct({
+  }),
+  new FishProduct({
       ProductName: 'Sand Substrate',
       Category: 'Fish Products',
       SubCategory: 'Substrate',
@@ -166,15 +166,15 @@ const fishProductsData = [
       Price: 400,
       StockQuantity: 170,
       AvailabilityStatus: 'In Stock',
-      Images: ['sand.jpg'],
+      Images: ['/genricFishProducts.webp'],
       Rating: 4.6,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '3kg',
       type: 'Sand',
       waterType: 'Freshwater'
-    }),
-    new FishProduct({
+  }),
+  new FishProduct({
       ProductName: 'Black Sand',
       Category: 'Fish Products',
       SubCategory: 'Substrate',
@@ -185,15 +185,15 @@ const fishProductsData = [
       Price: 450,
       StockQuantity: 160,
       AvailabilityStatus: 'In Stock',
-      Images: ['blacksand.jpg'],
+      Images: ['/genricFishProducts.webp'],
       Rating: 4.5,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '2.8kg',
       type: 'Sand',
       waterType: 'Freshwater'
-    }),
-    new FishProduct({
+  }),
+  new FishProduct({
       ProductName: 'Heater 200W',
       Category: 'Fish Products',
       SubCategory: 'Equipment',
@@ -204,15 +204,15 @@ const fishProductsData = [
       Price: 1200,
       StockQuantity: 80,
       AvailabilityStatus: 'In Stock',
-      Images: ['heater200w.jpg'],
+      Images: ['/genricFishProducts.webp'],
       Rating: 4.3,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '500g',
       type: 'Heater',
       waterType: 'Freshwater'
-    }),
-    new FishProduct({
+  }),
+  new FishProduct({
       ProductName: 'Heater 100W',
       Category: 'Fish Products',
       SubCategory: 'Equipment',
@@ -223,15 +223,15 @@ const fishProductsData = [
       Price: 1000,
       StockQuantity: 90,
       AvailabilityStatus: 'In Stock',
-      Images: ['heater100w.jpg'],
+      Images: ['/genricFishProducts.webp'],
       Rating: 4.4,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '400g',
       type: 'Heater',
       waterType: 'Freshwater'
-    }),
-    new FishProduct({
+  }),
+  new FishProduct({
       ProductName: 'Air Pump 5W',
       Category: 'Fish Products',
       SubCategory: 'Equipment',
@@ -242,15 +242,15 @@ const fishProductsData = [
       Price: 800,
       StockQuantity: 100,
       AvailabilityStatus: 'In Stock',
-      Images: ['airpump5w.jpg'],
+      Images: ['/genricFishProducts.webp'],
       Rating: 4.1,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '300g',
       type: 'Air Pump',
       waterType: 'Freshwater'
-    }),
-    new FishProduct({
+  }),
+  new FishProduct({
       ProductName: 'Air Pump 10W',
       Category: 'Fish Products',
       SubCategory: 'Equipment',
@@ -261,15 +261,15 @@ const fishProductsData = [
       Price: 1000,
       StockQuantity: 85,
       AvailabilityStatus: 'In Stock',
-      Images: ['airpump10w.jpg'],
+      Images: ['/genricFishProducts.webp'],
       Rating: 4.2,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '400g',
       type: 'Air Pump',
       waterType: 'Freshwater'
-    }),
-    new FishProduct({
+  }),
+  new FishProduct({
       ProductName: 'Canister Filter',
       Category: 'Fish Products',
       SubCategory: 'Equipment',
@@ -280,15 +280,15 @@ const fishProductsData = [
       Price: 2000,
       StockQuantity: 60,
       AvailabilityStatus: 'In Stock',
-      Images: ['canisterfilter.jpg'],
+      Images: ['/genricFishProducts.webp'],
       Rating: 4.6,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '2kg',
       type: 'Filter',
       waterType: 'Freshwater'
-    }),
-    new FishProduct({
+  }),
+  new FishProduct({
       ProductName: 'HOB Filter',
       Category: 'Fish Products',
       SubCategory: 'Equipment',
@@ -299,15 +299,15 @@ const fishProductsData = [
       Price: 1500,
       StockQuantity: 70,
       AvailabilityStatus: 'In Stock',
-      Images: ['hobfilter.jpg'],
+      Images: ['/genricFishProducts.webp'],
       Rating: 4.5,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '1.5kg',
       type: 'Filter',
       waterType: 'Freshwater'
-    }),
-    new FishProduct({
+  }),
+  new FishProduct({
       ProductName: 'LED Aquarium Light',
       Category: 'Fish Products',
       SubCategory: 'Accessories',
@@ -318,15 +318,15 @@ const fishProductsData = [
       Price: 1800,
       StockQuantity: 75,
       AvailabilityStatus: 'In Stock',
-      Images: ['ledlight.jpg'],
+      Images: ['/genricFishProducts.webp'],
       Rating: 4.7,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '600g',
       type: 'Lighting',
       waterType: 'Freshwater'
-    }),
-    new FishProduct({
+  }),
+  new FishProduct({
       ProductName: 'Fluorescent Light Tube',
       Category: 'Fish Products',
       SubCategory: 'Accessories',
@@ -337,15 +337,15 @@ const fishProductsData = [
       Price: 1600,
       StockQuantity: 65,
       AvailabilityStatus: 'In Stock',
-      Images: ['fluorescenttube.jpg'],
+      Images: ['/genricFishProducts.webp'],
       Rating: 4.4,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '700g',
       type: 'Lighting',
       waterType: 'Freshwater'
-    }),
-    new FishProduct({
+  }),
+  new FishProduct({
       ProductName: 'Artificial Plants Pack',
       Category: 'Fish Products',
       SubCategory: 'Decor',
@@ -356,15 +356,15 @@ const fishProductsData = [
       Price: 900,
       StockQuantity: 140,
       AvailabilityStatus: 'In Stock',
-      Images: ['artificialplants.jpg'],
+      Images: ['/genricFishProducts.webp'],
       Rating: 4.3,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '400g',
       type: 'Plants',
       waterType: 'Freshwater'
-    }),
-    new FishProduct({
+  }),
+  new FishProduct({
       ProductName: 'Driftwood',
       Category: 'Fish Products',
       SubCategory: 'Decor',
@@ -375,15 +375,16 @@ const fishProductsData = [
       Price: 1500,
       StockQuantity: 50,
       AvailabilityStatus: 'In Stock',
-      Images: ['driftwood.jpg'],
+      Images: ['/genricFishProducts.webp'],
       Rating: 4.8,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '1kg',
       type: 'Wood',
       waterType: 'Freshwater'
-    })
-  ]; 
+  })
+];
+
 
   const insertFishProducts = async () => {
     try {

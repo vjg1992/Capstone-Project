@@ -3,7 +3,7 @@ const DogProduct = require('../DogProduct');
 const generateProductID = require('../../utils/generateProductID');
 
 const dogProductsData = [
-    new DogProduct({
+  new DogProduct({
       ProductName: 'Premium Dog Food',
       Category: 'Dog Products',
       SubCategory: 'Food',
@@ -15,7 +15,7 @@ const dogProductsData = [
       DiscountedPrice: 1100,
       StockQuantity: 50,
       AvailabilityStatus: 'In Stock',
-      Images: ['dogfood.jpg'],
+      Images: ['/genricDogProducts.webp'],
       Rating: 4.5,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -23,8 +23,8 @@ const dogProductsData = [
       ageRange: 'Adult',
       flavor: 'Chicken',
       ingredients: 'Chicken, Rice, Vegetables'
-    }),
-    new DogProduct({
+  }),
+  new DogProduct({
       ProductName: 'Grain-Free Dog Food',
       Category: 'Dog Products',
       SubCategory: 'Food',
@@ -36,7 +36,7 @@ const dogProductsData = [
       DiscountedPrice: 1400,
       StockQuantity: 30,
       AvailabilityStatus: 'In Stock',
-      Images: ['grainfree_dogfood.jpg'],
+      Images: ['/genricDogProducts.webp'],
       Rating: 4.7,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -44,8 +44,8 @@ const dogProductsData = [
       ageRange: 'All Ages',
       flavor: 'Beef',
       ingredients: 'Beef, Sweet Potatoes, Peas'
-    }),
-    new DogProduct({
+  }),
+  new DogProduct({
       ProductName: 'Canned Dog Food',
       Category: 'Dog Products',
       SubCategory: 'Food',
@@ -57,7 +57,7 @@ const dogProductsData = [
       DiscountedPrice: 1800,
       StockQuantity: 40,
       AvailabilityStatus: 'In Stock',
-      Images: ['canned_dogfood.jpg'],
+      Images: ['/genricDogProducts.webp'],
       Rating: 4.3,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -65,8 +65,8 @@ const dogProductsData = [
       ageRange: 'Puppy',
       flavor: 'Turkey',
       ingredients: 'Turkey, Carrots, Potatoes'
-    }),
-    new DogProduct({
+  }),
+  new DogProduct({
       ProductName: 'Organic Wet Dog Food',
       Category: 'Dog Products',
       SubCategory: 'Food',
@@ -78,7 +78,7 @@ const dogProductsData = [
       DiscountedPrice: 2100,
       StockQuantity: 25,
       AvailabilityStatus: 'In Stock',
-      Images: ['organic_wet_dogfood.jpg'],
+      Images: ['/genricDogProducts.webp'],
       Rating: 4.8,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -86,8 +86,8 @@ const dogProductsData = [
       ageRange: 'Senior',
       flavor: 'Lamb',
       ingredients: 'Lamb, Peas, Carrots'
-    }),
-    new DogProduct({
+  }),
+  new DogProduct({
       ProductName: 'Chicken Dog Treats',
       Category: 'Dog Products',
       SubCategory: 'Treats',
@@ -99,7 +99,7 @@ const dogProductsData = [
       DiscountedPrice: 750,
       StockQuantity: 100,
       AvailabilityStatus: 'In Stock',
-      Images: ['chicken_dog_treats.jpg'],
+      Images: ['/genricDogProducts.webp'],
       Rating: 4.6,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -107,8 +107,8 @@ const dogProductsData = [
       ageRange: 'Adult',
       flavor: 'Chicken',
       ingredients: 'Chicken, Rice Flour, Glycerin'
-    }),
-    new DogProduct({
+  }),
+  new DogProduct({
       ProductName: 'Beef Dog Treats',
       Category: 'Dog Products',
       SubCategory: 'Treats',
@@ -120,7 +120,7 @@ const dogProductsData = [
       DiscountedPrice: 800,
       StockQuantity: 80,
       AvailabilityStatus: 'In Stock',
-      Images: ['beef_dog_treats.jpg'],
+      Images: ['/genricDogProducts.webp'],
       Rating: 4.4,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -128,8 +128,8 @@ const dogProductsData = [
       ageRange: 'Puppy',
       flavor: 'Beef',
       ingredients: 'Beef, Wheat Flour, Vegetable Glycerin'
-    }),
-    new DogProduct({
+  }),
+  new DogProduct({
       ProductName: 'Dental Chew Sticks',
       Category: 'Dog Products',
       SubCategory: 'Treats',
@@ -141,7 +141,7 @@ const dogProductsData = [
       DiscountedPrice: 650,
       StockQuantity: 60,
       AvailabilityStatus: 'In Stock',
-      Images: ['dental_chew_sticks.jpg'],
+      Images: ['/genricDogProducts.webp'],
       Rating: 4.2,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -149,8 +149,8 @@ const dogProductsData = [
       ageRange: 'Adult',
       flavor: 'Mint',
       ingredients: 'Mint, Rice Flour, Chicken'
-    }),
-    new DogProduct({
+  }),
+  new DogProduct({
       ProductName: 'Grain-Free Dental Treats',
       Category: 'Dog Products',
       SubCategory: 'Treats',
@@ -162,7 +162,7 @@ const dogProductsData = [
       DiscountedPrice: 850,
       StockQuantity: 70,
       AvailabilityStatus: 'In Stock',
-      Images: ['grainfree_dental_treats.jpg'],
+      Images: ['/genricDogProducts.webp'],
       Rating: 4.5,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -170,8 +170,8 @@ const dogProductsData = [
       ageRange: 'All Ages',
       flavor: 'Peanut Butter',
       ingredients: 'Peanut Butter, Rice Flour, Vegetable Glycerin'
-    }),
-    new DogProduct({
+  }),
+  new DogProduct({
       ProductName: 'Nylon Chew Toy',
       Category: 'Dog Products',
       SubCategory: 'Toys',
@@ -183,7 +183,7 @@ const dogProductsData = [
       DiscountedPrice: 450,
       StockQuantity: 90,
       AvailabilityStatus: 'In Stock',
-      Images: ['nylon_chew_toy.jpg'],
+      Images: ['/genricDogProducts.webp'],
       Rating: 4.3,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -191,8 +191,8 @@ const dogProductsData = [
       ageRange: 'Adult',
       flavor: 'None',
       ingredients: 'Nylon'
-    }),
-    new DogProduct({
+  }),
+  new DogProduct({
       ProductName: 'Rubber Chew Ball',
       Category: 'Dog Products',
       SubCategory: 'Toys',
@@ -204,7 +204,7 @@ const dogProductsData = [
       DiscountedPrice: 550,
       StockQuantity: 100,
       AvailabilityStatus: 'In Stock',
-      Images: ['rubber_chew_ball.jpg'],
+      Images: ['/genricDogProducts.webp'],
       Rating: 4.6,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -212,8 +212,8 @@ const dogProductsData = [
       ageRange: 'Puppy',
       flavor: 'None',
       ingredients: 'Rubber'
-    }),
-    new DogProduct({
+  }),
+  new DogProduct({
       ProductName: 'Plush Squeaky Toy',
       Category: 'Dog Products',
       SubCategory: 'Toys',
@@ -225,7 +225,7 @@ const dogProductsData = [
       DiscountedPrice: 650,
       StockQuantity: 50,
       AvailabilityStatus: 'In Stock',
-      Images: ['plush_squeaky_toy.jpg'],
+      Images: ['/genricDogProducts.webp'],
       Rating: 4.7,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -233,8 +233,8 @@ const dogProductsData = [
       ageRange: 'All Ages',
       flavor: 'None',
       ingredients: 'Plush, Squeaker'
-    }),
-    new DogProduct({
+  }),
+  new DogProduct({
       ProductName: 'Interactive Squeaky Toy',
       Category: 'Dog Products',
       SubCategory: 'Toys',
@@ -246,7 +246,7 @@ const dogProductsData = [
       DiscountedPrice: 750,
       StockQuantity: 60,
       AvailabilityStatus: 'In Stock',
-      Images: ['interactive_squeaky_toy.jpg'],
+      Images: ['/genricDogProducts.webp'],
       Rating: 4.5,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -254,8 +254,8 @@ const dogProductsData = [
       ageRange: 'Adult',
       flavor: 'None',
       ingredients: 'Rubber, Squeaker'
-    }),
-    new DogProduct({
+  }),
+  new DogProduct({
       ProductName: 'Winter Dog Coat',
       Category: 'Dog Products',
       SubCategory: 'Clothing',
@@ -267,7 +267,7 @@ const dogProductsData = [
       DiscountedPrice: 2300,
       StockQuantity: 30,
       AvailabilityStatus: 'In Stock',
-      Images: ['winter_dog_coat.jpg'],
+      Images: ['/genricDogProducts.webp'],
       Rating: 4.8,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -275,8 +275,8 @@ const dogProductsData = [
       ageRange: 'All Ages',
       flavor: 'None',
       ingredients: 'Polyester, Fleece'
-    }),
-    new DogProduct({
+  }),
+  new DogProduct({
       ProductName: 'Rainproof Dog Jacket',
       Category: 'Dog Products',
       SubCategory: 'Clothing',
@@ -288,7 +288,7 @@ const dogProductsData = [
       DiscountedPrice: 2500,
       StockQuantity: 20,
       AvailabilityStatus: 'In Stock',
-      Images: ['rainproof_dog_jacket.jpg'],
+      Images: ['/genricDogProducts.webp'],
       Rating: 4.7,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -296,8 +296,8 @@ const dogProductsData = [
       ageRange: 'Adult',
       flavor: 'None',
       ingredients: 'Nylon, Polyester'
-    }),
-    new DogProduct({
+  }),
+  new DogProduct({
       ProductName: 'Cute Dog Sweater',
       Category: 'Dog Products',
       SubCategory: 'Clothing',
@@ -309,7 +309,7 @@ const dogProductsData = [
       DiscountedPrice: 1400,
       StockQuantity: 40,
       AvailabilityStatus: 'In Stock',
-      Images: ['cute_dog_sweater.jpg'],
+      Images: ['/genricDogProducts.webp'],
       Rating: 4.6,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -317,8 +317,8 @@ const dogProductsData = [
       ageRange: 'Puppy',
       flavor: 'None',
       ingredients: 'Wool, Cotton'
-    }),
-    new DogProduct({
+  }),
+  new DogProduct({
       ProductName: 'Knitted Dog Sweater',
       Category: 'Dog Products',
       SubCategory: 'Clothing',
@@ -330,7 +330,7 @@ const dogProductsData = [
       DiscountedPrice: 1700,
       StockQuantity: 35,
       AvailabilityStatus: 'In Stock',
-      Images: ['knitted_dog_sweater.jpg'],
+      Images: ['/genricDogProducts.webp'],
       Rating: 4.9,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -338,8 +338,8 @@ const dogProductsData = [
       ageRange: 'All Ages',
       flavor: 'None',
       ingredients: 'Wool, Acrylic'
-    }),
-    new DogProduct({
+  }),
+  new DogProduct({
       ProductName: 'Adjustable Dog Collar',
       Category: 'Dog Products',
       SubCategory: 'Accessories',
@@ -351,7 +351,7 @@ const dogProductsData = [
       DiscountedPrice: 1100,
       StockQuantity: 80,
       AvailabilityStatus: 'In Stock',
-      Images: ['adjustable_dog_collar.jpg'],
+      Images: ['/genricDogProducts.webp'],
       Rating: 4.4,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -359,8 +359,8 @@ const dogProductsData = [
       ageRange: 'Adult',
       flavor: 'None',
       ingredients: 'Nylon, Plastic Buckle'
-    }),
-    new DogProduct({
+  }),
+  new DogProduct({
       ProductName: 'Leather Dog Collar',
       Category: 'Dog Products',
       SubCategory: 'Accessories',
@@ -372,7 +372,7 @@ const dogProductsData = [
       DiscountedPrice: 2300,
       StockQuantity: 25,
       AvailabilityStatus: 'In Stock',
-      Images: ['leather_dog_collar.jpg'],
+      Images: ['/genricDogProducts.webp'],
       Rating: 4.7,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -380,8 +380,8 @@ const dogProductsData = [
       ageRange: 'All Ages',
       flavor: 'None',
       ingredients: 'Leather, Metal Buckle'
-    }),
-    new DogProduct({
+  }),
+  new DogProduct({
       ProductName: 'Retractable Dog Leash',
       Category: 'Dog Products',
       SubCategory: 'Accessories',
@@ -393,7 +393,7 @@ const dogProductsData = [
       DiscountedPrice: 1900,
       StockQuantity: 50,
       AvailabilityStatus: 'In Stock',
-      Images: ['retractable_dog_leash.jpg'],
+      Images: ['/genricDogProducts.webp'],
       Rating: 4.5,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -401,8 +401,8 @@ const dogProductsData = [
       ageRange: 'Adult',
       flavor: 'None',
       ingredients: 'Nylon, Plastic'
-    }),
-    new DogProduct({
+  }),
+  new DogProduct({
       ProductName: 'Reflective Dog Leash',
       Category: 'Dog Products',
       SubCategory: 'Accessories',
@@ -414,7 +414,7 @@ const dogProductsData = [
       DiscountedPrice: 2100,
       StockQuantity: 40,
       AvailabilityStatus: 'In Stock',
-      Images: ['reflective_dog_leash.jpg'],
+      Images: ['/genricDogProducts.webp'],
       Rating: 4.6,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -422,8 +422,8 @@ const dogProductsData = [
       ageRange: 'All Ages',
       flavor: 'None',
       ingredients: 'Nylon, Reflective Material'
-    })
-  ];
+  })
+];
 
   const insertDogProducts = async () => {
     try {

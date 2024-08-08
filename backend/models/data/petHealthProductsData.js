@@ -3,7 +3,7 @@ const PetHealth = require('../PetHealth');
 const generateProductID = require('../../utils/generateProductID');
 
 const petHealthProductsData = [
-    new PetHealth({
+  new PetHealth({
       ProductName: 'Pet Vitamins',
       Category: 'Pet Health and Wellness',
       SubCategory: 'Supplements',
@@ -14,7 +14,7 @@ const petHealthProductsData = [
       Price: 600,
       StockQuantity: 60,
       AvailabilityStatus: 'In Stock',
-      Images: ['petvitamins.jpg'],
+      Images: ['/genricPetHealth.webp'],
       Rating: 4.4,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -22,8 +22,8 @@ const petHealthProductsData = [
       weight: '200g',
       dosage: '1 tablet daily',
       ageRange: 'All Ages'
-    }),
-    new PetHealth({
+  }),
+  new PetHealth({
       ProductName: 'Pet Omega-3',
       Category: 'Pet Health and Wellness',
       SubCategory: 'Supplements',
@@ -34,7 +34,7 @@ const petHealthProductsData = [
       Price: 500,
       StockQuantity: 100,
       AvailabilityStatus: 'In Stock',
-      Images: ['petomega3.jpg'],
+      Images: ['/genricPetHealth.webp'],
       Rating: 4.7,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -42,8 +42,8 @@ const petHealthProductsData = [
       weight: '250ml',
       dosage: '5ml daily',
       ageRange: 'All Ages'
-    }),
-    new PetHealth({
+  }),
+  new PetHealth({
       ProductName: 'Pet Joint Support',
       Category: 'Pet Health and Wellness',
       SubCategory: 'Supplements',
@@ -54,7 +54,7 @@ const petHealthProductsData = [
       Price: 700,
       StockQuantity: 80,
       AvailabilityStatus: 'In Stock',
-      Images: ['petjointsupport.jpg'],
+      Images: ['/genricPetHealth.webp'],
       Rating: 4.5,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -62,8 +62,8 @@ const petHealthProductsData = [
       weight: '300g',
       dosage: '1 tablet daily',
       ageRange: 'Senior'
-    }),
-    new PetHealth({
+  }),
+  new PetHealth({
       ProductName: 'Pet Probiotics',
       Category: 'Pet Health and Wellness',
       SubCategory: 'Supplements',
@@ -74,7 +74,7 @@ const petHealthProductsData = [
       Price: 400,
       StockQuantity: 50,
       AvailabilityStatus: 'In Stock',
-      Images: ['petprobiotics.jpg'],
+      Images: ['/genricPetHealth.webp'],
       Rating: 4.6,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -82,8 +82,8 @@ const petHealthProductsData = [
       weight: '150g',
       dosage: '1 tablet daily',
       ageRange: 'All Ages'
-    }),
-    new PetHealth({
+  }),
+  new PetHealth({
       ProductName: 'Pet Ear Cleaner',
       Category: 'Pet Health and Wellness',
       SubCategory: 'Grooming',
@@ -94,7 +94,7 @@ const petHealthProductsData = [
       Price: 300,
       StockQuantity: 70,
       AvailabilityStatus: 'In Stock',
-      Images: ['petearcleaner.jpg'],
+      Images: ['/genricPetHealth.webp'],
       Rating: 4.3,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -102,8 +102,8 @@ const petHealthProductsData = [
       weight: '100ml',
       dosage: 'Apply as needed',
       ageRange: 'All Ages'
-    }),
-    new PetHealth({
+  }),
+  new PetHealth({
       ProductName: 'Pet Dental Chews',
       Category: 'Pet Health and Wellness',
       SubCategory: 'Grooming',
@@ -114,7 +114,7 @@ const petHealthProductsData = [
       Price: 450,
       StockQuantity: 90,
       AvailabilityStatus: 'In Stock',
-      Images: ['petdentalchews.jpg'],
+      Images: ['/genricPetHealth.webp'],
       Rating: 4.8,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -122,8 +122,8 @@ const petHealthProductsData = [
       weight: '500g',
       dosage: '1 chew daily',
       ageRange: 'All Ages'
-    }),
-    new PetHealth({
+  }),
+  new PetHealth({
       ProductName: 'Pet Eye Drops',
       Category: 'Pet Health and Wellness',
       SubCategory: 'Grooming',
@@ -134,7 +134,7 @@ const petHealthProductsData = [
       Price: 350,
       StockQuantity: 40,
       AvailabilityStatus: 'In Stock',
-      Images: ['peteyedrops.jpg'],
+      Images: ['/genricPetHealth.webp'],
       Rating: 4.2,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -142,8 +142,8 @@ const petHealthProductsData = [
       weight: '50ml',
       dosage: 'Apply as needed',
       ageRange: 'All Ages'
-    }),
-    new PetHealth({
+  }),
+  new PetHealth({
       ProductName: 'Pet Dental Spray',
       Category: 'Pet Health and Wellness',
       SubCategory: 'Grooming',
@@ -154,7 +154,7 @@ const petHealthProductsData = [
       Price: 400,
       StockQuantity: 85,
       AvailabilityStatus: 'In Stock',
-      Images: ['petdentalspray.jpg'],
+      Images: ['/genricPetHealth.webp'],
       Rating: 4.7,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -162,8 +162,8 @@ const petHealthProductsData = [
       weight: '100ml',
       dosage: 'Spray as needed',
       ageRange: 'All Ages'
-    }),
-    new PetHealth({
+  }),
+  new PetHealth({
       ProductName: 'Pet Fur Shampoo',
       Category: 'Pet Health and Wellness',
       SubCategory: 'Grooming',
@@ -174,7 +174,7 @@ const petHealthProductsData = [
       Price: 320,
       StockQuantity: 120,
       AvailabilityStatus: 'In Stock',
-      Images: ['petshampoo.jpg'],
+      Images: ['/genricPetHealth.webp'],
       Rating: 4.4,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -182,8 +182,8 @@ const petHealthProductsData = [
       weight: '250ml',
       dosage: 'Use as needed',
       ageRange: 'All Ages'
-    }),
-    new PetHealth({
+  }),
+  new PetHealth({
       ProductName: 'Pet Flea Spray',
       Category: 'Pet Health and Wellness',
       SubCategory: 'Grooming',
@@ -194,7 +194,7 @@ const petHealthProductsData = [
       Price: 450,
       StockQuantity: 60,
       AvailabilityStatus: 'In Stock',
-      Images: ['petfleaspray.jpg'],
+      Images: ['/genricPetHealth.webp'],
       Rating: 4.6,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -202,8 +202,8 @@ const petHealthProductsData = [
       weight: '200ml',
       dosage: 'Spray as needed',
       ageRange: 'All Ages'
-    }),
-    new PetHealth({
+  }),
+  new PetHealth({
       ProductName: 'Pet Paw Balm',
       Category: 'Pet Health and Wellness',
       SubCategory: 'Grooming',
@@ -214,7 +214,7 @@ const petHealthProductsData = [
       Price: 280,
       StockQuantity: 110,
       AvailabilityStatus: 'In Stock',
-      Images: ['petpawbalm.jpg'],
+      Images: ['/genricPetHealth.webp'],
       Rating: 4.5,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -222,8 +222,8 @@ const petHealthProductsData = [
       weight: '100g',
       dosage: 'Apply as needed',
       ageRange: 'All Ages'
-    }),
-    new PetHealth({
+  }),
+  new PetHealth({
       ProductName: 'Pet Allergy Relief',
       Category: 'Pet Health and Wellness',
       SubCategory: 'Medication',
@@ -234,7 +234,7 @@ const petHealthProductsData = [
       Price: 550,
       StockQuantity: 90,
       AvailabilityStatus: 'In Stock',
-      Images: ['petallergyrelief.jpg'],
+      Images: ['/genricPetHealth.webp'],
       Rating: 4.6,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -242,8 +242,8 @@ const petHealthProductsData = [
       weight: '150g',
       dosage: '1 tablet daily',
       ageRange: 'All Ages'
-    }),
-    new PetHealth({
+  }),
+  new PetHealth({
       ProductName: 'Pet Anxiety Relief',
       Category: 'Pet Health and Wellness',
       SubCategory: 'Medication',
@@ -254,7 +254,7 @@ const petHealthProductsData = [
       Price: 600,
       StockQuantity: 75,
       AvailabilityStatus: 'In Stock',
-      Images: ['petanxietyrelief.jpg'],
+      Images: ['/genricPetHealth.webp'],
       Rating: 4.7,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -262,8 +262,8 @@ const petHealthProductsData = [
       weight: '200g',
       dosage: '1 tablet daily',
       ageRange: 'All Ages'
-    }),
-    new PetHealth({
+  }),
+  new PetHealth({
       ProductName: 'Pet Dewormer',
       Category: 'Pet Health and Wellness',
       SubCategory: 'Medication',
@@ -274,7 +274,7 @@ const petHealthProductsData = [
       Price: 400,
       StockQuantity: 130,
       AvailabilityStatus: 'In Stock',
-      Images: ['petdewormer.jpg'],
+      Images: ['/genricPetHealth.webp'],
       Rating: 4.5,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -282,8 +282,8 @@ const petHealthProductsData = [
       weight: '150g',
       dosage: '1 tablet monthly',
       ageRange: 'All Ages'
-    }),
-    new PetHealth({
+  }),
+  new PetHealth({
       ProductName: 'Pet Tick Collar',
       Category: 'Pet Health and Wellness',
       SubCategory: 'Medication',
@@ -294,7 +294,7 @@ const petHealthProductsData = [
       Price: 350,
       StockQuantity: 70,
       AvailabilityStatus: 'In Stock',
-      Images: ['pettickcollar.jpg'],
+      Images: ['/genricPetHealth.webp'],
       Rating: 4.3,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -302,8 +302,8 @@ const petHealthProductsData = [
       weight: '75g',
       dosage: 'Wear continuously',
       ageRange: 'All Ages'
-    }),
-    new PetHealth({
+  }),
+  new PetHealth({
       ProductName: 'Pet Flea Collar',
       Category: 'Pet Health and Wellness',
       SubCategory: 'Medication',
@@ -314,7 +314,7 @@ const petHealthProductsData = [
       Price: 370,
       StockQuantity: 65,
       AvailabilityStatus: 'In Stock',
-      Images: ['petfleacollar.jpg'],
+      Images: ['/genricPetHealth.webp'],
       Rating: 4.4,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -322,8 +322,8 @@ const petHealthProductsData = [
       weight: '80g',
       dosage: 'Wear continuously',
       ageRange: 'All Ages'
-    }),
-    new PetHealth({
+  }),
+  new PetHealth({
       ProductName: 'Pet Ear Drops',
       Category: 'Pet Health and Wellness',
       SubCategory: 'Medication',
@@ -334,7 +334,7 @@ const petHealthProductsData = [
       Price: 300,
       StockQuantity: 55,
       AvailabilityStatus: 'In Stock',
-      Images: ['petearinfections.jpg'],
+      Images: ['/genricPetHealth.webp'],
       Rating: 4.5,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -342,8 +342,8 @@ const petHealthProductsData = [
       weight: '30ml',
       dosage: 'Apply as needed',
       ageRange: 'All Ages'
-    }),
-    new PetHealth({
+  }),
+  new PetHealth({
       ProductName: 'Pet Pain Relief',
       Category: 'Pet Health and Wellness',
       SubCategory: 'Medication',
@@ -354,7 +354,7 @@ const petHealthProductsData = [
       Price: 650,
       StockQuantity: 90,
       AvailabilityStatus: 'In Stock',
-      Images: ['petpainrelief.jpg'],
+      Images: ['/genricPetHealth.webp'],
       Rating: 4.6,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -362,8 +362,8 @@ const petHealthProductsData = [
       weight: '100g',
       dosage: '1 tablet daily',
       ageRange: 'All Ages'
-    }),
-    new PetHealth({
+  }),
+  new PetHealth({
       ProductName: 'Pet Skin Cream',
       Category: 'Pet Health and Wellness',
       SubCategory: 'Medication',
@@ -374,7 +374,7 @@ const petHealthProductsData = [
       Price: 500,
       StockQuantity: 100,
       AvailabilityStatus: 'In Stock',
-      Images: ['petskincream.jpg'],
+      Images: ['/genricPetHealth.webp'],
       Rating: 4.5,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -382,8 +382,8 @@ const petHealthProductsData = [
       weight: '100g',
       dosage: 'Apply as needed',
       ageRange: 'All Ages'
-    }),
-    new PetHealth({
+  }),
+  new PetHealth({
       ProductName: 'Pet Vitamin Chews',
       Category: 'Pet Health and Wellness',
       SubCategory: 'Supplements',
@@ -394,7 +394,7 @@ const petHealthProductsData = [
       Price: 600,
       StockQuantity: 95,
       AvailabilityStatus: 'In Stock',
-      Images: ['petvitaminchews.jpg'],
+      Images: ['/genricPetHealth.webp'],
       Rating: 4.7,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
@@ -402,8 +402,9 @@ const petHealthProductsData = [
       weight: '200g',
       dosage: '1 chew daily',
       ageRange: 'All Ages'
-    })
-  ];
+  })
+];
+
 
   const insertPetHealthProducts = async () => {
     try {

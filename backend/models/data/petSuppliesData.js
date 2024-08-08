@@ -3,7 +3,7 @@ const PetSupply = require('../PetSupply');
 const generateProductID = require('../../utils/generateProductID');
 
 const petSuppliesData = [
-    new PetSupply({
+  new PetSupply({
       ProductName: 'Pet Bed',
       Category: 'General Pet Supplies',
       SubCategory: 'Bedding',
@@ -15,14 +15,14 @@ const petSuppliesData = [
       DiscountedPrice: 1400,
       StockQuantity: 20,
       AvailabilityStatus: 'In Stock',
-      Images: ['petbed.jpg'],
+      Images: ['/genricPetSupplies.webp'],
       Rating: 4.6,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '2kg',
       dimensions: '50cm x 70cm'
-    }),
-    new PetSupply({
+  }),
+  new PetSupply({
       ProductName: 'Orthopedic Pet Bed',
       Category: 'General Pet Supplies',
       SubCategory: 'Bedding',
@@ -34,14 +34,14 @@ const petSuppliesData = [
       DiscountedPrice: 2300,
       StockQuantity: 15,
       AvailabilityStatus: 'In Stock',
-      Images: ['orthobed.jpg'],
+      Images: ['/genricPetSupplies.webp'],
       Rating: 4.8,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '3kg',
       dimensions: '60cm x 80cm'
-    }),
-    new PetSupply({
+  }),
+  new PetSupply({
       ProductName: 'Pet Blanket',
       Category: 'General Pet Supplies',
       SubCategory: 'Bedding',
@@ -53,14 +53,14 @@ const petSuppliesData = [
       DiscountedPrice: 450,
       StockQuantity: 30,
       AvailabilityStatus: 'In Stock',
-      Images: ['petblanket.jpg'],
+      Images: ['/genricPetSupplies.webp'],
       Rating: 4.5,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '1kg',
       dimensions: '100cm x 100cm'
-    }),
-    new PetSupply({
+  }),
+  new PetSupply({
       ProductName: 'Heated Pet Blanket',
       Category: 'General Pet Supplies',
       SubCategory: 'Bedding',
@@ -72,14 +72,14 @@ const petSuppliesData = [
       DiscountedPrice: 1100,
       StockQuantity: 10,
       AvailabilityStatus: 'In Stock',
-      Images: ['heatedblanket.jpg'],
+      Images: ['/genricPetSupplies.webp'],
       Rating: 4.7,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '1.5kg',
       dimensions: '80cm x 120cm'
-    }),
-    new PetSupply({
+  }),
+  new PetSupply({
       ProductName: 'Pet Carrier',
       Category: 'Travel Supplies',
       SubCategory: 'Carriers',
@@ -91,14 +91,14 @@ const petSuppliesData = [
       DiscountedPrice: 1800,
       StockQuantity: 25,
       AvailabilityStatus: 'In Stock',
-      Images: ['softcarrier.jpg'],
+      Images: ['/genricPetSupplies.webp'],
       Rating: 4.6,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '2.5kg',
       dimensions: '40cm x 60cm'
-    }),
-    new PetSupply({
+  }),
+  new PetSupply({
       ProductName: 'Hard-Sided Pet Carrier',
       Category: 'Travel Supplies',
       SubCategory: 'Carriers',
@@ -110,14 +110,14 @@ const petSuppliesData = [
       DiscountedPrice: 2300,
       StockQuantity: 20,
       AvailabilityStatus: 'In Stock',
-      Images: ['hardcarrier.jpg'],
+      Images: ['/genricPetSupplies.webp'],
       Rating: 4.8,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '3.5kg',
       dimensions: '50cm x 70cm'
-    }),
-    new PetSupply({
+  }),
+  new PetSupply({
       ProductName: 'Pet Stroller',
       Category: 'Travel Supplies',
       SubCategory: 'Carriers',
@@ -129,14 +129,14 @@ const petSuppliesData = [
       DiscountedPrice: 3300,
       StockQuantity: 12,
       AvailabilityStatus: 'In Stock',
-      Images: ['stroller.jpg'],
+      Images: ['/genricPetSupplies.webp'],
       Rating: 4.7,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '6kg',
       dimensions: '100cm x 50cm'
-    }),
-    new PetSupply({
+  }),
+  new PetSupply({
       ProductName: 'Luxury Pet Stroller',
       Category: 'Travel Supplies',
       SubCategory: 'Carriers',
@@ -148,14 +148,14 @@ const petSuppliesData = [
       DiscountedPrice: 4800,
       StockQuantity: 8,
       AvailabilityStatus: 'In Stock',
-      Images: ['luxurystroller.jpg'],
+      Images: ['/genricPetSupplies.webp'],
       Rating: 4.9,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '7kg',
       dimensions: '120cm x 60cm'
-    }),
-    new PetSupply({
+  }),
+  new PetSupply({
       ProductName: 'Dog Leash',
       Category: 'Walking Supplies',
       SubCategory: 'Leashes',
@@ -167,14 +167,14 @@ const petSuppliesData = [
       DiscountedPrice: 270,
       StockQuantity: 50,
       AvailabilityStatus: 'In Stock',
-      Images: ['leash.jpg'],
+      Images: ['/genricPetSupplies.webp'],
       Rating: 4.5,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '0.2kg',
       dimensions: '150cm x 2cm'
-    }),
-    new PetSupply({
+  }),
+  new PetSupply({
       ProductName: 'Retractable Dog Leash',
       Category: 'Walking Supplies',
       SubCategory: 'Leashes',
@@ -186,14 +186,14 @@ const petSuppliesData = [
       DiscountedPrice: 650,
       StockQuantity: 40,
       AvailabilityStatus: 'In Stock',
-      Images: ['retractableleash.jpg'],
+      Images: ['/genricPetSupplies.webp'],
       Rating: 4.6,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '0.3kg',
       dimensions: '500cm x 2cm'
-    }),
-    new PetSupply({
+  }),
+  new PetSupply({
       ProductName: 'Training Dog Leash',
       Category: 'Walking Supplies',
       SubCategory: 'Leashes',
@@ -205,14 +205,14 @@ const petSuppliesData = [
       DiscountedPrice: 370,
       StockQuantity: 35,
       AvailabilityStatus: 'In Stock',
-      Images: ['trainingleash.jpg'],
+      Images: ['/genricPetSupplies.webp'],
       Rating: 4.4,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '0.25kg',
       dimensions: '200cm x 2cm'
-    }),
-    new PetSupply({
+  }),
+  new PetSupply({
       ProductName: 'Pet Water Bottle',
       Category: 'Travel Supplies',
       SubCategory: 'Hydration',
@@ -224,14 +224,14 @@ const petSuppliesData = [
       DiscountedPrice: 180,
       StockQuantity: 60,
       AvailabilityStatus: 'In Stock',
-      Images: ['waterbottle.jpg'],
+      Images: ['/genricPetSupplies.webp'],
       Rating: 4.5,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '0.1kg',
       dimensions: '25cm x 7cm'
-    }),
-    new PetSupply({
+  }),
+  new PetSupply({
       ProductName: 'Collapsible Pet Bowl',
       Category: 'Travel Supplies',
       SubCategory: 'Hydration',
@@ -243,14 +243,14 @@ const petSuppliesData = [
       DiscountedPrice: 130,
       StockQuantity: 70,
       AvailabilityStatus: 'In Stock',
-      Images: ['bowl.jpg'],
+      Images: ['/genricPetSupplies.webp'],
       Rating: 4.4,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '0.15kg',
       dimensions: '10cm x 10cm'
-    }),
-    new PetSupply({
+  }),
+  new PetSupply({
       ProductName: 'Elevated Pet Bowl',
       Category: 'Feeding Supplies',
       SubCategory: 'Bowls & Feeders',
@@ -262,14 +262,14 @@ const petSuppliesData = [
       DiscountedPrice: 370,
       StockQuantity: 25,
       AvailabilityStatus: 'In Stock',
-      Images: ['elevatedbowl.jpg'],
+      Images: ['/genricPetSupplies.webp'],
       Rating: 4.6,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '0.5kg',
       dimensions: '20cm x 20cm'
-    }),
-    new PetSupply({
+  }),
+  new PetSupply({
       ProductName: 'Automatic Pet Feeder',
       Category: 'Feeding Supplies',
       SubCategory: 'Bowls & Feeders',
@@ -281,14 +281,14 @@ const petSuppliesData = [
       DiscountedPrice: 2800,
       StockQuantity: 18,
       AvailabilityStatus: 'In Stock',
-      Images: ['automaticfeeder.jpg'],
+      Images: ['/genricPetSupplies.webp'],
       Rating: 4.7,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '2kg',
       dimensions: '30cm x 30cm'
-    }),
-    new PetSupply({
+  }),
+  new PetSupply({
       ProductName: 'Stainless Steel Pet Bowl',
       Category: 'Feeding Supplies',
       SubCategory: 'Bowls & Feeders',
@@ -300,14 +300,14 @@ const petSuppliesData = [
       DiscountedPrice: 180,
       StockQuantity: 50,
       AvailabilityStatus: 'In Stock',
-      Images: ['steelbowl.jpg'],
+      Images: ['/genricPetSupplies.webp'],
       Rating: 4.5,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '0.3kg',
       dimensions: '15cm x 15cm'
-    }),
-    new PetSupply({
+  }),
+  new PetSupply({
       ProductName: 'Pet Shampoo',
       Category: 'Grooming Supplies',
       SubCategory: 'Bathing',
@@ -319,14 +319,14 @@ const petSuppliesData = [
       DiscountedPrice: 280,
       StockQuantity: 45,
       AvailabilityStatus: 'In Stock',
-      Images: ['shampoo.jpg'],
+      Images: ['/genricPetSupplies.webp'],
       Rating: 4.6,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '0.5kg',
       dimensions: '20cm x 7cm'
-    }),
-    new PetSupply({
+  }),
+  new PetSupply({
       ProductName: 'Pet Conditioner',
       Category: 'Grooming Supplies',
       SubCategory: 'Bathing',
@@ -338,14 +338,14 @@ const petSuppliesData = [
       DiscountedPrice: 320,
       StockQuantity: 40,
       AvailabilityStatus: 'In Stock',
-      Images: ['conditioner.jpg'],
+      Images: ['/genricPetSupplies.webp'],
       Rating: 4.5,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '0.5kg',
       dimensions: '20cm x 7cm'
-    }),
-    new PetSupply({
+  }),
+  new PetSupply({
       ProductName: 'Pet Brush',
       Category: 'Grooming Supplies',
       SubCategory: 'Brushing',
@@ -357,14 +357,14 @@ const petSuppliesData = [
       DiscountedPrice: 230,
       StockQuantity: 35,
       AvailabilityStatus: 'In Stock',
-      Images: ['brush.jpg'],
+      Images: ['/genricPetSupplies.webp'],
       Rating: 4.5,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '0.2kg',
       dimensions: '10cm x 5cm'
-    }),
-    new PetSupply({
+  }),
+  new PetSupply({
       ProductName: 'Deshedding Tool',
       Category: 'Grooming Supplies',
       SubCategory: 'Brushing',
@@ -376,14 +376,15 @@ const petSuppliesData = [
       DiscountedPrice: 370,
       StockQuantity: 30,
       AvailabilityStatus: 'In Stock',
-      Images: ['desheddingtool.jpg'],
+      Images: ['/genricPetSupplies.webp'],
       Rating: 4.6,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       weight: '0.3kg',
       dimensions: '15cm x 5cm'
-    })
-  ];    
+  })
+];
+  
 
 
   const insertPetSupplies = async () => {

@@ -7,7 +7,7 @@ const wishlistRoutes = require('./routes/wishlistRoutes');
 const cartRoutes = require('./routes/cartRoutes');
 const orderRoutes = require('./routes/orderRoutes');
 const reviewRoutes = require('./routes/reviewRoutes');
-const purchaseRoutes = require('./routes/purchaseRoutes');  // Import purchase routes
+const purchaseRoutes = require('./routes/purchaseRoutes');  
 require('dotenv').config();
 
 const app = express();

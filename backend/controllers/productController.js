@@ -53,6 +53,40 @@ const getProduct = async (req, res) => {
   }
 };
 
+const getProductsByCategory = async (req, res) => {
+  try {
+    const { category } = req.params;
+    let products;
+
+    switch (category) {
+      case 'DogProduct':
+        products = await DogProduct.find({});
+        break;
+      case 'CatProduct':
+        products = await CatProduct.find({});
+        break;
+      case 'FishProduct':
+        products = await FishProduct.find({});
+        break;
+      case 'PetSupply':
+        products = await PetSupply.find({});
+        break;
+      case 'PetHealth':
+        products = await PetHealth.find({});
+        break;
+      case 'PetAccessory':
+        products = await PetAccessory.find({});
+        break;
+      default:
+        return res.status(400).send('Invalid product category');
+    }
+
+    res.send(products);
+  } catch (error) {
+    res.status(500).send(error);
+  }
+};
+
 const updateProduct = async (req, res) => {
   try {
     const product = await ProductDetails.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true });
@@ -80,6 +114,7 @@ const deleteProduct = async (req, res) => {
 module.exports = {
   createProduct,
   getProduct,
+  getProductsByCategory,
   updateProduct,
   deleteProduct
 };

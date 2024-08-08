@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 import './Home.css';
 
 const categories = [
-  { name: 'dogProducts', displayName: 'Dog Products', imgSrc: 'dogProducts.webp' },
-  { name: 'catProducts', displayName: 'Cat Products', imgSrc: 'catProducts.webp' },
-  { name: 'fishProducts', displayName: 'Fish Products', imgSrc: 'fishProducts.webp' },
-  { name: 'generalPetSupplies', displayName: 'General Pet Supplies', imgSrc: 'generalPetSupplies.webp' },
-  { name: 'petHealthAndWellness', displayName: 'Pet Health and Wellness', imgSrc: 'petHealthAndWellness.webp' },
-  { name: 'petAccessories', displayName: 'Pet Accessories', imgSrc: 'petAccessories.webp' },
+  { name: 'DogProduct', displayName: 'Dog Products', imgSrc: 'dogProducts.webp' },
+  { name: 'CatProduct', displayName: 'Cat Products', imgSrc: 'catProducts.webp' },
+  { name: 'FishProduct', displayName: 'Fish Products', imgSrc: 'fishProducts.webp' },
+  { name: 'PetSupply', displayName: 'General Pet Supplies', imgSrc: 'generalPetSupplies.webp' },
+  { name: 'PetHealth', displayName: 'Pet Health and Wellness', imgSrc: 'petHealthAndWellness.webp' },
+  { name: 'PetAccessory', displayName: 'Pet Accessories', imgSrc: 'petAccessories.webp' },
 ];
 
 const Home = () => {

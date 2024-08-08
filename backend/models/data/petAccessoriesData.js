@@ -3,7 +3,7 @@ const PetAccessory = require('../PetAccessory');
 const generateProductID = require('../../utils/generateProductID');
 
 const petAccessoriesData = [
-    new PetAccessory({
+  new PetAccessory({
       ProductName: 'Pet Collar',
       Category: 'Pet Accessories',
       SubCategory: 'Collars',
@@ -15,15 +15,15 @@ const petAccessoriesData = [
       DiscountedPrice: 350,
       StockQuantity: 80,
       AvailabilityStatus: 'In Stock',
-      Images: ['petcollar.jpg'],
+      Images: ['/genricPetAccessory.webp'],
       Rating: 4.2,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       color: 'Red',
       size: 'Medium',
       material: 'Leather'
-    }),
-    new PetAccessory({
+  }),
+  new PetAccessory({
       ProductName: 'Pet Collar Deluxe',
       Category: 'Pet Accessories',
       SubCategory: 'Collars',
@@ -35,15 +35,15 @@ const petAccessoriesData = [
       DiscountedPrice: 550,
       StockQuantity: 50,
       AvailabilityStatus: 'In Stock',
-      Images: ['petcollar_deluxe.jpg'],
+      Images: ['/genricPetAccessory.webp'],
       Rating: 4.5,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       color: 'Black',
       size: 'Large',
       material: 'Leather'
-    }),
-    new PetAccessory({
+  }),
+  new PetAccessory({
       ProductName: 'Pet Collar Nylon',
       Category: 'Pet Accessories',
       SubCategory: 'Collars',
@@ -55,15 +55,15 @@ const petAccessoriesData = [
       DiscountedPrice: 180,
       StockQuantity: 100,
       AvailabilityStatus: 'In Stock',
-      Images: ['petcollar_nylon.jpg'],
+      Images: ['/genricPetAccessory.webp'],
       Rating: 4.0,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       color: 'Blue',
       size: 'Small',
       material: 'Nylon'
-    }),
-    new PetAccessory({
+  }),
+  new PetAccessory({
       ProductName: 'Pet Collar Adjustable',
       Category: 'Pet Accessories',
       SubCategory: 'Collars',
@@ -75,15 +75,15 @@ const petAccessoriesData = [
       DiscountedPrice: 200,
       StockQuantity: 120,
       AvailabilityStatus: 'In Stock',
-      Images: ['petcollar_adjustable.jpg'],
+      Images: ['/genricPetAccessory.webp'],
       Rating: 4.3,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       color: 'Green',
       size: 'Medium',
       material: 'Nylon'
-    }),
-    new PetAccessory({
+  }),
+  new PetAccessory({
       ProductName: 'Pet Bed Cozy',
       Category: 'Pet Accessories',
       SubCategory: 'Beds',
@@ -95,15 +95,15 @@ const petAccessoriesData = [
       DiscountedPrice: 750,
       StockQuantity: 40,
       AvailabilityStatus: 'In Stock',
-      Images: ['petbed_cozy.jpg'],
+      Images: ['/genricPetAccessory.webp'],
       Rating: 4.6,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       color: 'Gray',
       size: 'Large',
       material: 'Foam'
-    }),
-    new PetAccessory({
+  }),
+  new PetAccessory({
       ProductName: 'Pet Bed Deluxe',
       Category: 'Pet Accessories',
       SubCategory: 'Beds',
@@ -115,15 +115,15 @@ const petAccessoriesData = [
       DiscountedPrice: 950,
       StockQuantity: 30,
       AvailabilityStatus: 'In Stock',
-      Images: ['petbed_deluxe.jpg'],
+      Images: ['/genricPetAccessory.webp'],
       Rating: 4.8,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       color: 'Beige',
       size: 'Extra Large',
       material: 'Foam'
-    }),
-    new PetAccessory({
+  }),
+  new PetAccessory({
       ProductName: 'Pet Bed Waterproof',
       Category: 'Pet Accessories',
       SubCategory: 'Beds',
@@ -135,15 +135,15 @@ const petAccessoriesData = [
       DiscountedPrice: 850,
       StockQuantity: 35,
       AvailabilityStatus: 'In Stock',
-      Images: ['petbed_waterproof.jpg'],
+      Images: ['/genricPetAccessory.webp'],
       Rating: 4.7,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       color: 'Blue',
       size: 'Large',
       material: 'Waterproof'
-    }),
-    new PetAccessory({
+  }),
+  new PetAccessory({
       ProductName: 'Pet Bed Outdoor',
       Category: 'Pet Accessories',
       SubCategory: 'Beds',
@@ -155,15 +155,15 @@ const petAccessoriesData = [
       DiscountedPrice: 900,
       StockQuantity: 25,
       AvailabilityStatus: 'In Stock',
-      Images: ['petbed_outdoor.jpg'],
+      Images: ['/genricPetAccessory.webp'],
       Rating: 4.4,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       color: 'Black',
       size: 'Extra Large',
       material: 'Waterproof'
-    }),
-    new PetAccessory({
+  }),
+  new PetAccessory({
       ProductName: 'Pet Toy Squeaky',
       Category: 'Pet Accessories',
       SubCategory: 'Toys',
@@ -175,15 +175,15 @@ const petAccessoriesData = [
       DiscountedPrice: 130,
       StockQuantity: 150,
       AvailabilityStatus: 'In Stock',
-      Images: ['pettoy_squeaky.jpg'],
+      Images: ['/genricPetAccessory.webp'],
       Rating: 4.1,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       color: 'Yellow',
       size: 'Small',
       material: 'Rubber'
-    }),
-    new PetAccessory({
+  }),
+  new PetAccessory({
       ProductName: 'Pet Toy Chew',
       Category: 'Pet Accessories',
       SubCategory: 'Toys',
@@ -195,15 +195,15 @@ const petAccessoriesData = [
       DiscountedPrice: 180,
       StockQuantity: 140,
       AvailabilityStatus: 'In Stock',
-      Images: ['pettoy_chew.jpg'],
+      Images: ['/genricPetAccessory.webp'],
       Rating: 4.5,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       color: 'Red',
       size: 'Medium',
       material: 'Rubber'
-    }),
-    new PetAccessory({
+  }),
+  new PetAccessory({
       ProductName: 'Pet Toy Plush',
       Category: 'Pet Accessories',
       SubCategory: 'Toys',
@@ -215,15 +215,15 @@ const petAccessoriesData = [
       DiscountedPrice: 160,
       StockQuantity: 160,
       AvailabilityStatus: 'In Stock',
-      Images: ['pettoy_plush.jpg'],
+      Images: ['/genricPetAccessory.webp'],
       Rating: 4.2,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       color: 'Pink',
       size: 'Small',
       material: 'Plush'
-    }),
-    new PetAccessory({
+  }),
+  new PetAccessory({
       ProductName: 'Pet Toy Rope',
       Category: 'Pet Accessories',
       SubCategory: 'Toys',
@@ -235,15 +235,15 @@ const petAccessoriesData = [
       DiscountedPrice: 200,
       StockQuantity: 130,
       AvailabilityStatus: 'In Stock',
-      Images: ['pettoy_rope.jpg'],
+      Images: ['/genricPetAccessory.webp'],
       Rating: 4.3,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       color: 'Green',
       size: 'Medium',
       material: 'Cotton'
-    }),
-    new PetAccessory({
+  }),
+  new PetAccessory({
       ProductName: 'Pet Leash Retractable',
       Category: 'Pet Accessories',
       SubCategory: 'Leashes',
@@ -255,15 +255,15 @@ const petAccessoriesData = [
       DiscountedPrice: 280,
       StockQuantity: 90,
       AvailabilityStatus: 'In Stock',
-      Images: ['petleash_retractable.jpg'],
+      Images: ['/genricPetAccessory.webp'],
       Rating: 4.5,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       color: 'Blue',
       size: 'Medium',
       material: 'Nylon'
-    }),
-    new PetAccessory({
+  }),
+  new PetAccessory({
       ProductName: 'Pet Leash Rope',
       Category: 'Pet Accessories',
       SubCategory: 'Leashes',
@@ -275,15 +275,15 @@ const petAccessoriesData = [
       DiscountedPrice: 230,
       StockQuantity: 100,
       AvailabilityStatus: 'In Stock',
-      Images: ['petleash_rope.jpg'],
+      Images: ['/genricPetAccessory.webp'],
       Rating: 4.3,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       color: 'Red',
       size: 'Large',
       material: 'Rope'
-    }),
-    new PetAccessory({
+  }),
+  new PetAccessory({
       ProductName: 'Pet Leash Leather',
       Category: 'Pet Accessories',
       SubCategory: 'Leashes',
@@ -295,15 +295,15 @@ const petAccessoriesData = [
       DiscountedPrice: 450,
       StockQuantity: 60,
       AvailabilityStatus: 'In Stock',
-      Images: ['petleash_leather.jpg'],
+      Images: ['/genricPetAccessory.webp'],
       Rating: 4.7,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       color: 'Black',
       size: 'Medium',
       material: 'Leather'
-    }),
-    new PetAccessory({
+  }),
+  new PetAccessory({
       ProductName: 'Pet Leash Chain',
       Category: 'Pet Accessories',
       SubCategory: 'Leashes',
@@ -315,15 +315,15 @@ const petAccessoriesData = [
       DiscountedPrice: 320,
       StockQuantity: 80,
       AvailabilityStatus: 'In Stock',
-      Images: ['petleash_chain.jpg'],
+      Images: ['/genricPetAccessory.webp'],
       Rating: 4.6,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       color: 'Silver',
       size: 'Large',
       material: 'Metal'
-    }),
-    new PetAccessory({
+  }),
+  new PetAccessory({
       ProductName: 'Pet Harness Padded',
       Category: 'Pet Accessories',
       SubCategory: 'Harnesses',
@@ -335,15 +335,15 @@ const petAccessoriesData = [
       DiscountedPrice: 420,
       StockQuantity: 70,
       AvailabilityStatus: 'In Stock',
-      Images: ['petharness_padded.jpg'],
+      Images: ['/genricPetAccessory.webp'],
       Rating: 4.4,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       color: 'Red',
       size: 'Medium',
       material: 'Nylon'
-    }),
-    new PetAccessory({
+  }),
+  new PetAccessory({
       ProductName: 'Pet Harness Reflective',
       Category: 'Pet Accessories',
       SubCategory: 'Harnesses',
@@ -355,15 +355,15 @@ const petAccessoriesData = [
       DiscountedPrice: 470,
       StockQuantity: 75,
       AvailabilityStatus: 'In Stock',
-      Images: ['petharness_reflective.jpg'],
+      Images: ['/genricPetAccessory.webp'],
       Rating: 4.5,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       color: 'Yellow',
       size: 'Large',
       material: 'Nylon'
-    }),
-    new PetAccessory({
+  }),
+  new PetAccessory({
       ProductName: 'Pet Harness Mesh',
       Category: 'Pet Accessories',
       SubCategory: 'Harnesses',
@@ -375,15 +375,15 @@ const petAccessoriesData = [
       DiscountedPrice: 380,
       StockQuantity: 85,
       AvailabilityStatus: 'In Stock',
-      Images: ['petharness_mesh.jpg'],
+      Images: ['/genricPetAccessory.webp'],
       Rating: 4.2,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       color: 'Blue',
       size: 'Medium',
       material: 'Mesh'
-    }),
-    new PetAccessory({
+  }),
+  new PetAccessory({
       ProductName: 'Pet Harness Adjustable',
       Category: 'Pet Accessories',
       SubCategory: 'Harnesses',
@@ -395,15 +395,15 @@ const petAccessoriesData = [
       DiscountedPrice: 330,
       StockQuantity: 90,
       AvailabilityStatus: 'In Stock',
-      Images: ['petharness_adjustable.jpg'],
+      Images: ['/genricPetAccessory.webp'],
       Rating: 4.3,
       UpdatedBy: new mongoose.Types.ObjectId('66ac2fbd188d36b237916ae2'),
       Vendor: { vendor_id: null },
       color: 'Green',
       size: 'Small',
       material: 'Nylon'
-    })
-  ]; 
+  })
+];
 
 
   const insertPetAccessories = async () => {
